@@ -15,10 +15,10 @@ namespace Unit04
     class Program
     {
         private static int FRAME_RATE = 12;
-        private static int MAX_X = 1500;    //Default 900
-        private static int MAX_Y = 900;     //Default 600
+        private static int MAX_X = 900;    //Default 900
+        public static int MAX_Y = 600;     //Default 600
         private static int CELL_SIZE = 30;
-        private static int FONT_SIZE = 45;
+        private static int FONT_SIZE = 30;
         private static int COLS = 60;   //Default 60
         private static int ROWS = 40;   //Default 40
         private static string CAPTION = "Greed";

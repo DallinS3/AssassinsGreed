@@ -84,14 +84,14 @@ namespace Unit04.Game.Casting
         public void MoveNext(int maxX, int maxY, int score)
         {
             int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = 0;
+            int y = CELL_SIZE;
             if (score > 10)
             {
                 y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
             }
             else
             {
-                y = 780;
+                y = (Program.MAX_Y - CELL_SIZE);
             }
             _position = new Point(x, y);
         }
@@ -100,7 +100,7 @@ namespace Unit04.Game.Casting
         {
             int x = _position.GetX();
             int y = 0;
-            if (this._position.GetY() > 870)
+            if (this._position.GetY() > (Program.MAX_Y - CELL_SIZE))
             {
                 TransformationCentral();
             }
